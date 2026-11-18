@@ -8,6 +8,6 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
-    exclude: ["node_modules", ".next", "interviewer/**"],
+    exclude: ["node_modules", ".next", "inter/**"],
   },
 });

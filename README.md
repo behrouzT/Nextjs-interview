@@ -1,6 +1,6 @@
 # MCI Digital B2B interview
 
-Interview exercise for the **MCI Digital B2B** department. About **90 minutes**: build a pricing function, then debug the jobs board.
+Interview exercise for the **MCI Digital B2B** department. About **90 minutes**: build a pricing function, debug the jobs board, then match the sign-in screen to the Figma handoff.
 
 The app is a small internal tool for a repair shop. It prices a job, and it lists the jobs already on the bench.
 
@@ -145,8 +145,19 @@ A successful response is **200**:
 
 Likely files: `lib/jobs/board.ts`, `app/api/jobs/route.ts`, `components/JobsBoard.tsx`.
 
+## Task 3 — Match the sign-in screen
+
+`/login` already works. About **10 minutes**. Make it look like the Figma Dev Mode export in `design/login.fig.json`.
+
+Match **Login / Desktop** and **Login / Mobile**: the brand panel, the card, the type, the colors, the radius, and the spacing. Keep the behavior as it is.
+
+- An empty email or password still shows only that field's hint.
+- `tech@hearth.test` / `bench-4242` still opens `/jobs`.
+- Any other pair still shows "That email and password do not match."
+
 ## Done when
 
 - `npm test` passes
 - The worked example on `/quote` shows $72.45
 - `/jobs` matches the rules above when you search, filter, and mark a job done
+- `/login` matches `design/login.fig.json` on a desktop width and a mobile width, including the empty, invalid, and success paths

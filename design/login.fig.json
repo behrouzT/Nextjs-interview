@@ -1,0 +1,288 @@
+{
+  "file": "Hearth & Circuit Desk",
+  "page": "Auth",
+  "exportedFrom": "Figma Dev Mode",
+  "styles": {
+    "color": {
+      "paper": "#F3EEE4",
+      "card": "#FFFDF8",
+      "ink": "#221E18",
+      "muted": "#6D6458",
+      "line": "#E3D9C8",
+      "accent": "#1F6B4A",
+      "accentInk": "#FFFFFF",
+      "warn": "#9A3412",
+      "warnSoft": "#FDECEC",
+      "onAccent": "#FFFFFF",
+      "onAccentMuted": "#FFFFFFCC"
+    },
+    "text": {
+      "eyebrow": {
+        "fontFamily": "Geist",
+        "fontSize": 12,
+        "fontWeight": 500,
+        "lineHeight": 16,
+        "letterSpacing": 1.92,
+        "textCase": "UPPER"
+      },
+      "display": {
+        "fontFamily": "Geist",
+        "fontSize": 48,
+        "fontWeight": 600,
+        "lineHeight": 56
+      },
+      "title": {
+        "fontFamily": "Geist",
+        "fontSize": 30,
+        "fontWeight": 600,
+        "lineHeight": 36
+      },
+      "body": {
+        "fontFamily": "Geist",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "lineHeight": 24
+      },
+      "lede": {
+        "fontFamily": "Geist",
+        "fontSize": 18,
+        "fontWeight": 400,
+        "lineHeight": 28
+      },
+      "label": {
+        "fontFamily": "Geist",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 20
+      },
+      "button": {
+        "fontFamily": "Geist",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 20
+      }
+    },
+    "radius": {
+      "card": 16,
+      "field": 12,
+      "pill": 999
+    }
+  },
+  "components": {
+    "Text field": {
+      "layout": "vertical",
+      "itemSpacing": 8,
+      "width": "fill",
+      "label": { "style": "label", "fill": "ink" },
+      "input": {
+        "height": 44,
+        "paddingLeft": 14,
+        "paddingRight": 14,
+        "radius": 12,
+        "fill": "paper",
+        "stroke": "line",
+        "strokeWidth": 1,
+        "style": "body",
+        "fillText": "ink"
+      },
+      "focus": { "stroke": "accent", "strokeWidth": 2 },
+      "error": { "stroke": "warn", "strokeWidth": 1 },
+      "hint": { "style": "label", "fill": "warn" }
+    },
+    "Primary button": {
+      "height": 44,
+      "width": "fill",
+      "radius": 999,
+      "fill": "accent",
+      "style": "button",
+      "fillText": "accentInk"
+    }
+  },
+  "frames": [
+    {
+      "name": "Login / Desktop",
+      "width": 1440,
+      "height": 900,
+      "layout": "horizontal",
+      "children": [
+        {
+          "name": "Brand panel",
+          "width": 720,
+          "height": 900,
+          "fill": "accent",
+          "layout": "vertical",
+          "padding": 64,
+          "itemSpacing": 16,
+          "primaryAxisAlign": "center",
+          "counterAxisAlign": "start",
+          "children": [
+            {
+              "type": "text",
+              "name": "Department",
+              "characters": "MCI Digital B2B",
+              "style": "eyebrow",
+              "fill": "onAccentMuted"
+            },
+            {
+              "type": "text",
+              "name": "Shop",
+              "characters": "Hearth & Circuit",
+              "style": "display",
+              "fill": "onAccent"
+            },
+            {
+              "type": "text",
+              "name": "Lede",
+              "characters": "The bench is open. Sign in to price a job or pick up the queue.",
+              "style": "lede",
+              "fill": "onAccentMuted",
+              "maxWidth": 420
+            }
+          ]
+        },
+        {
+          "name": "Form panel",
+          "width": 720,
+          "height": 900,
+          "fill": "paper",
+          "layout": "vertical",
+          "primaryAxisAlign": "center",
+          "counterAxisAlign": "center",
+          "children": [
+            { "component": "Sign-in card", "variant": "Default" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Login / Mobile",
+      "width": 390,
+      "height": 844,
+      "fill": "paper",
+      "layout": "vertical",
+      "padding": 24,
+      "primaryAxisAlign": "center",
+      "counterAxisAlign": "center",
+      "children": [
+        { "component": "Sign-in card", "variant": "Default", "width": "fill" }
+      ]
+    }
+  ],
+  "componentSets": {
+    "Sign-in card": {
+      "width": 420,
+      "padding": 32,
+      "itemSpacing": 24,
+      "radius": 16,
+      "fill": "card",
+      "stroke": "line",
+      "strokeWidth": 1,
+      "layout": "vertical",
+      "variants": {
+        "Default": {
+          "title": "Sign in",
+          "subtitle": "Use your shop email.",
+          "banner": null,
+          "fields": [
+            {
+              "label": "Email",
+              "placeholder": "tech@hearth.test",
+              "inputType": "email",
+              "error": null
+            },
+            {
+              "label": "Password",
+              "placeholder": "Password",
+              "inputType": "password",
+              "error": null
+            }
+          ],
+          "button": "Sign in"
+        },
+        "Empty": {
+          "title": "Sign in",
+          "subtitle": "Use your shop email.",
+          "banner": null,
+          "fields": [
+            {
+              "label": "Email",
+              "placeholder": "tech@hearth.test",
+              "inputType": "email",
+              "error": "Enter your email"
+            },
+            {
+              "label": "Password",
+              "placeholder": "Password",
+              "inputType": "password",
+              "error": "Enter your password"
+            }
+          ],
+          "button": "Sign in"
+        },
+        "Invalid": {
+          "title": "Sign in",
+          "subtitle": "Use your shop email.",
+          "banner": "That email and password do not match.",
+          "fields": [
+            {
+              "label": "Email",
+              "placeholder": "tech@hearth.test",
+              "inputType": "email",
+              "error": null
+            },
+            {
+              "label": "Password",
+              "placeholder": "Password",
+              "inputType": "password",
+              "error": null
+            }
+          ],
+          "button": "Sign in"
+        },
+        "Submitting": {
+          "title": "Sign in",
+          "subtitle": "Use your shop email.",
+          "banner": null,
+          "fields": [
+            {
+              "label": "Email",
+              "placeholder": "tech@hearth.test",
+              "inputType": "email",
+              "error": null
+            },
+            {
+              "label": "Password",
+              "placeholder": "Password",
+              "inputType": "password",
+              "error": null
+            }
+          ],
+          "button": "Signing in…",
+          "buttonDisabled": true
+        }
+      }
+    }
+  },
+  "prototype": {
+    "account": {
+      "email": "tech@hearth.test",
+      "password": "bench-4242"
+    },
+    "interactions": [
+      {
+        "trigger": "Submit with an empty email or an empty password",
+        "goesTo": "Sign-in card / Empty",
+        "note": "Show only the hints for the empty fields."
+      },
+      {
+        "trigger": "Submit with any other email or password",
+        "goesTo": "Sign-in card / Invalid"
+      },
+      {
+        "trigger": "Submit with the shop account",
+        "goesTo": "/jobs",
+        "note": "Show Sign-in card / Submitting until the route changes. There is no API."
+      }
+    ]
+  }
+}

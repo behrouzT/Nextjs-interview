@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/quote", label: "Quote" },
@@ -6,6 +9,9 @@ const links = [
 ];
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  if (pathname === "/login") return null;
+
   return (
     <header className="border-b border-line bg-card">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-6 px-6 py-4">

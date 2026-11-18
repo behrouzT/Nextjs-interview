@@ -7,15 +7,15 @@ export default function Home() {
         <p className="text-sm font-medium uppercase tracking-[0.16em] text-accent">
           MCI Digital B2B · Interview
         </p>
-        <h1 className="mt-2 text-4xl font-semibold tracking-tight">Two tasks, one desk</h1>
+        <h1 className="mt-2 text-4xl font-semibold tracking-tight">Three tasks, one desk</h1>
         <p className="mt-4 text-lg leading-8 text-muted">
           Hearth & Circuit repairs laptops for a handful of local clients. The desk app
           prices a job, then lists the work in progress. Read <code>README.md</code> before
-          you start. The tests are the checker.
+          you start. The tests check the first two tasks. The Figma file checks sign-in.
         </p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-3">
         <Link
           href="/quote"
           className="rounded-2xl border border-line bg-card p-6 transition-colors hover:border-accent"
@@ -40,6 +40,19 @@ export default function Home() {
           <p className="mt-3 leading-7 text-muted">
             The list, the summary cards, and <code>GET /api/jobs</code> disagree with the
             rules. Find the bugs. Do not edit the tests.
+          </p>
+        </Link>
+        <Link
+          href="/login"
+          className="rounded-2xl border border-line bg-card p-6 transition-colors hover:border-accent"
+        >
+          <p className="text-xs font-medium uppercase tracking-[0.16em] text-accent">
+            Task 3 · about 10 minutes
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight">Match sign-in</h2>
+          <p className="mt-3 leading-7 text-muted">
+            <code>/login</code> already signs in. Make the screen match{" "}
+            <code>design/login.fig.json</code>.
           </p>
         </Link>
       </div>
